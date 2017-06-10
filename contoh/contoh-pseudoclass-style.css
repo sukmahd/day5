@@ -1,0 +1,21 @@
+#saya-bisa-di-hover {
+  height: 100px;
+  width: 100px;
+  background: black;
+}
+
+#saya-bisa-di-hover:hover {
+  background: green;
+}
+
+#saya-bisa-di-hover-dengan-animasi {
+  height: 100px;
+  width: 100px;
+  background: black;
+  transition: 0.5s;
+}
+
+#saya-bisa-di-hover-dengan-animasi:hover {
+  background: green;
+  transition: 0.5s;
+}
