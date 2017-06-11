@@ -14,25 +14,25 @@
 var soal1 = {
   soal: 'Apa Kepanjangan dari HTML ? ',
   jawaban: 'a',
-  pilihan: ['a. hypertext markup language','b. HaTi Mark language',' c. Hasalam']
+  pilihan: ['A. HyperText Markup Language','B. HaTi Mark language', 'C. Hasalam']
 }
 
 var soal2 = {
   soal: 'Apa Kepanjangan dari CSS ? ',
   jawaban: 'c',
-  pilihan: ['a. CasandraStyleSheet','b. CarisaStyleSheet', 'c. CascandingStyleSheet']
+  pilihan: ['A. CasandraStyleSheet','B. CarisaStyleSheet', 'C. CascandingStyleSheet']
 }
 
 var soal3 = {
   soal: 'Apa Kepanjangan dari JS ? ',
   jawaban: 'a',
-  pilihan: ['a. JavaScript', 'b. JavaShop', 'c. JanganSalah']
+  pilihan: ['A. JavaScript', 'B. JavaShop', 'C. JanganSalah']
 }
 
 var soal4 = {
-  soal: 'siapa nama instruktur di phase-0 ? ',
+  soal: 'Siapa nama instruktur di phase-0 ? ',
   jawaban: 'b',
-  pilihan: ['a. Ariel', 'b. Ryan', 'c. Mukidi']
+  pilihan: ['A. Ariel', 'B. Ryan', 'C. Mukidi']
 }
 
 var arrSoal = [soal1, soal2, soal3, soal4];
@@ -81,5 +81,15 @@ for(var i = 0; i < soal.length; i++)
     var pilihanText = document.createTextNode(arrSoal[i].pilihan[j])
     pilihan.appendChild(pilihanText);
     soal[i].appendChild(pilihan);
+  }
+  var inputPilihan = document.getElementsByClassName('pilihan');
+
+  var pilihanContent = document.getElementsByClassName('pilihan-content')
+
+  for(var p = 0; p < inputPilihan.length; p++)
+  {
+    inputPilihan[p].addEventListener('click', function(event){
+      pilihanContent[i].innerHTML = event.target.innerHTML;
+    })
   }
 }
